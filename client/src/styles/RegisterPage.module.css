@@ -1,0 +1,97 @@
+/* 🌟 Full-Screen Centered Container */
+.signupContainer {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    text-align: center;       /* Ensures inner content is centered */
+}
+
+/* 📝 Form Box (PERFECTLY CENTERED) */
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;  /* Restrict form width */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers everything inside */
+}
+
+/* 🔖 Labels (Ensure Proper Alignment) */
+label {
+    width: 100%;  /* Make labels take full width */
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* ✏️ Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* 📩 Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* 📌 Register/Login Text */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;  /* Explicitly center any text */
+}
+
+/* 🔗 Links */
+a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Mobile Optimization */
+@media screen and (max-width: 480px) {
+    .signupContainer {
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
