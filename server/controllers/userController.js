@@ -35,9 +35,11 @@ export const loginUser = async (req, res) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    res
-      .cookie("token", token, { httpOnly: true })
-      .json({ message: "Login successful", user });
+    res.cookie("token", token, { 
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production', // only send over HTTPS in production
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' 
+    }).json({ message: "Login successful", user });
   } catch (error) {
     res.status(500).json({ message: "Server Error" });
   }
