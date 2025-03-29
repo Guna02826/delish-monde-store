@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "src": "/api/(.*)", "dest": "https://delish-monde-store.onrender.com/api/$1" },
-    { "src": "/(?!api)(.*)", "dest": "/index.html" }
+    { "source": "/api/(.*)", "destination": "https://delish-monde-store.onrender.com/api/$1" },
+    { "source": "/(?!api)(.*)", "destination": "/index.html" }
   ]
 }
